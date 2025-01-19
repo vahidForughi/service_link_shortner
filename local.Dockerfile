@@ -1,4 +1,4 @@
-FROM microservice-kickstart/service_link_shortner_base:${DOCKER_IMAGE_LARAVEL_BASE_VERSION}
+FROM microservice-kickstart/laravel-base:${DOCKER_IMAGE_BASE_VERSION}
 
 WORKDIR /app
 

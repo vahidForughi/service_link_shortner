@@ -1,6 +1,8 @@
+include .env
+
 build-base:
-	docker build -t microservice-kickstart/service_link_shortner_base:1.0.0 -f base.Dockerfile . $(args)
+	docker build -t microservice-kickstart/service_link_shortner_base:{DOCKER_IMAGE_BASE_VERSION} -f base.Dockerfile . $(args)
 build-local:
-	docker build -t microservice-kickstart/service_link_shortner_local -f local.Dockerfile . $(args)
+	docker build -t microservice-kickstart/service_link_shortner_local -f local.Dockerfile . --build-arg="DOCKER_IMAGE_BASE_VERSION=${DOCKER_IMAGE_BASE_VERSION}" $(args)
 build-stage:
-	docker build -t microservice-kickstart/service_link_shortner_stage -f stage.Dockerfile . $(args)
+	docker build -t microservice-kickstart/service_link_shortner_stage -f stage.Dockerfile . --build-arg="DOCKER_IMAGE_BASE_VERSION=${DOCKER_IMAGE_BASE_VERSION}" $(args)
