@@ -1,2 +1,2 @@
 build-local:
-	docker build -t service_starter/link_shortner -f local.Dockerfile . $(args)
+	docker build -t microservice-kickstart/service_link_shortner -f local.Dockerfile . $(args)
