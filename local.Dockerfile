@@ -1,3 +1,5 @@
+ARG DOCKER_IMAGE_BASE_VERSION=latest
+
 FROM microservice-kickstart/laravel-base:${DOCKER_IMAGE_BASE_VERSION}
 
 WORKDIR /app
